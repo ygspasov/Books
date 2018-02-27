@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .container-fluid{
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .alert {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #book-form {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-inline {
+      margin: 10px 0;
+    }
+
+    .form-inline span {
+      flex-grow: 1;
+    }
+
+    .form-inline input {
+      flex-grow: 9;
+      max-width: 400px;
+      margin: 0;
+    }
+
+    input.btn {
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+  <title>Book List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h2 class='text-center'>Add Book</h2>
+    <div class="row">
+      <form for="title" id="book-form">
+        <div class="form-inline">
+          <span>Title</span>
+          <input type="text" class="form-control form-inline" id="title" placeholder="Enter Title">
+        </div>
+        <div class="form-inline">
+          <span>Author</span>
+          <input type="text" class="form-control" id="author" placeholder="Enter Author">
+        </div>
+        <div class="form-inline">
+          <span>ISBN#</span>
+          <input type="text" class="form-control" id="isbn" placeholder="Enter ISBN">
+        </div>
+        <div>
+          <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
